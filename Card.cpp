@@ -2,7 +2,10 @@
 // Created by teich on 04/05/2022.
 //
 #include "Card.h"
-
+#include <iostream>
+using std::cout;
+using std::endl;
+const char* LINE_DIVIDER  = "------------------------";
 
 
 Card::Card(CardType type, const CardStats &stats) {
@@ -16,6 +19,8 @@ void Card::applyEncounter(Player &player) const {
             if(player.getAttackStrength() >= m_stats.force){
                 player.levelUp();
                 player.addCoins(m_stats.loot);
+                cout << "The player defeated the monster and won the loot! Hooray !" << endl;
+                cout << LINE_DIVIDER << endl;
             }
             else{
                 player.damage(m_stats.hpLossOnDefeat);
