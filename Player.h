@@ -32,8 +32,8 @@ public:
     /*
     * C'tor to the "default player"
     */
-    Player(): m_name(""), m_hp(MAX_HP), m_force(STARTING_FORCE),
-    m_level(STARTING_LEVEL), m_maxHP(MAX_HP), m_coins(STARTING_COINS){}
+    Player(): m_name(""), m_maxHP(MAX_HP), m_hp(MAX_HP), m_force(STARTING_FORCE),
+    m_level(STARTING_LEVEL), m_coins(STARTING_COINS){}
 
 
     /*
@@ -148,10 +148,10 @@ public:
 
 private:
     const char* m_name;
-    int m_level;
-    int m_force;
     int m_maxHP;
     int m_hp;
+    int m_force;
+    int m_level;
     int m_coins;
 
 };
