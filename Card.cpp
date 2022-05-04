@@ -16,13 +16,11 @@ void Card::applyEncounter(Player &player) const {
             if(player.getAttackStrength() >= m_stats.force){
                 player.levelUp();
                 player.addCoins(m_stats.loot);
-                cout << "The player defeated the monster and won the loot! Hooray !" << endl;
-                cout << LINE_DIVIDER << endl;
+                printBattleResult(true);
             }
             else{
                 player.damage(m_stats.hpLossOnDefeat);
-                cout << "The player loss to the monster and lost health points! Boo !" << endl;
-                cout << LINE_DIVIDER << endl;
+                printBattleResult(false);
             }
             break;
         case CardType::Buff :

@@ -50,6 +50,16 @@ public:
 
 
     /*
+     *  update the game status:
+     *
+     *  @return
+     *          void
+     */
+    void updateStatus(GameStatus gameStatus);
+
+
+
+    /*
      *  Get the status of the game:
      *
      *  @return
