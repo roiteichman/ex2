@@ -22,7 +22,7 @@ void Mtmchkin::playNextCard() {
 
 }
 bool Mtmchkin::isOver(){
-    return m_player.isKnockedOut();
+    return (m_player.isKnockedOut() || m_player.getLevel()==MAX_LEVEL);
 }
 
 
