@@ -13,6 +13,9 @@ const int STARTING_COINS = 0;
 const int MAX_LEVEL = 10;
 
 class Player{
+
+
+
 public:
 
     /*
@@ -25,6 +28,13 @@ public:
      *      A new Player.
     */
     explicit Player(const char* name, int hp = MAX_HP, int force = STARTING_FORCE);
+
+    /*
+    * C'tor to the "default player"
+    */
+    Player(): m_name(""), m_hp(MAX_HP), m_force(STARTING_FORCE),
+    m_level(STARTING_LEVEL), m_maxHP(MAX_HP), m_coins(STARTING_COINS){}
+
 
     /*
      * Here we are explicitly telling the compiler to use the default methods
@@ -136,7 +146,6 @@ public:
     */
     int getAttackStrength() const;
 
-
 private:
     const char* m_name;
     int m_level;
@@ -145,11 +154,6 @@ private:
     int m_hp;
     int m_coins;
 
-
-    /*
-    * C'tor to the "default player" - the problem is that without name!
-    */
-    Player() = delete;
 };
 
 #endif //EX2_PLAYER_H
