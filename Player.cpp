@@ -35,11 +35,17 @@ void Player::heal(int n) {
     if (m_hp+n<=m_maxHP){
         m_hp+=n;
     }
+    else{
+        m_hp=m_maxHP;
+    }
 }
 
 void Player::damage(int n){
     if(m_hp-n>=0){
         m_hp-=n;
+    }
+    else{
+        m_hp=0;
     }
 }
 
