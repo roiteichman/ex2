@@ -24,6 +24,8 @@ void Card::applyEncounter(Player &player) const {
             }
             else{
                 player.damage(m_stats.hpLossOnDefeat);
+                cout << "The player loss to the monster and lost health points! Boo !" << endl;
+                cout << LINE_DIVIDER << endl;
             }
             break;
         case CardType::Buff :
