@@ -3,9 +3,6 @@
 //
 #include "Card.h"
 #include <iostream>
-using std::cout;
-using std::endl;
-const char* LINE_DIVIDER  = "------------------------";
 
 
 Card::Card(CardType type, const CardStats &stats) {
