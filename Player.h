@@ -27,12 +27,6 @@ public:
     */
     explicit Player(const char* name, int hp = MAX_HP, int force = STARTING_FORCE);
 
-    /*
-    * C'tor to the "default player"
-    */
-    /*Player(): m_name(""), m_maxHP(MAX_HP), m_hp(MAX_HP), m_force(STARTING_FORCE),
-    m_level(STARTING_LEVEL), m_coins(STARTING_COINS){}*/
-
 
     /*
      * Here we are explicitly telling the compiler to use the default methods
