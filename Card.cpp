@@ -40,7 +40,8 @@ void Card::applyEncounter(Player &player) const
     }
 }
 
-void Card::printInfo() const {
+void Card::printInfo() const
+{
     switch (m_effect) {
         case CardType::Battle :
             printBattleCardInfo(m_stats);

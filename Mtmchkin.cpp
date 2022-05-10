@@ -27,17 +27,20 @@ void Mtmchkin::playNextCard()
         updateStatus(m_gameStatus);
     }
 }
-bool Mtmchkin::isOver(){
+bool Mtmchkin::isOver() const
+{
     return (m_player.isKnockedOut() || m_player.getLevel()==MAX_LEVEL);
 }
 
 
-GameStatus Mtmchkin::getGameStatus() const {
+GameStatus Mtmchkin::getGameStatus() const
+{
     return m_gameStatus;
 }
 
 
-void Mtmchkin::updateStatus(GameStatus gameStatus) {
+void Mtmchkin::updateStatus(GameStatus gameStatus)
+{
     if (m_player.isKnockedOut()){
         m_gameStatus = GameStatus::Loss;
     }
