@@ -26,6 +26,12 @@ void Mtmchkin::playNextCard()
         m_currentCard = m_cardsArray[++m_currentIndex % m_numOfCards];
         updateStatus(m_gameStatus);
     }
+    if(isOver()){
+
+        //TODO: how to delete the data?
+
+        delete[m_cardsArray];
+    }
 }
 bool Mtmchkin::isOver() const
 {
