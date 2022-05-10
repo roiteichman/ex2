@@ -5,9 +5,9 @@
 #include "utilities.h"
 
 Player::Player(const char* name, int hp, int force):
+    m_name(name),
     m_maxHP(hp),
     m_hp(m_maxHP),
-    m_name(name),
     m_force(force),
     m_level(STARTING_LEVEL),
     m_coins(STARTING_COINS)
