@@ -6,7 +6,7 @@
 
 Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCards):
     m_player(Player(playerName)),
-    m_cardsArray(cardsArray),
+    m_cardsArray(new Card[numOfCards]),
     m_numOfCards(numOfCards),
     m_gameStatus(GameStatus::MidGame),
     m_currentCard(cardsArray[0]),

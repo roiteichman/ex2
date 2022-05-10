@@ -11,24 +11,38 @@ Player::Player(const char* name, int hp, int force):
     m_force(force),
     m_level(STARTING_LEVEL),
     m_coins(STARTING_COINS)
-{}
+{
+    if(hp<=0){
+        m_maxHP=MAX_HP;
+    }
+    if(force<=0){
+        m_force=STARTING_FORCE;
+    }
+}
 
-void Player::printInfo(){
+void Player::printInfo() const
+{
     printPlayerInfo(m_name, m_level, m_force, m_hp, m_coins);
 }
 
-void Player::levelUp(){
+void Player::levelUp()
+{
     if (m_level!=MAX_LEVEL) {
         ++m_level;
     }
 }
 
-int Player::getLevel() const{
+int Player::getLevel() const
+{
     return m_level;
 }
 
-void Player::buff(int n) {
-    m_force+=n;
+void Player::buff(int n)
+{
+    if(n>0)
+    {
+        m_force+=n;
+    }
 }
 
 void Player::heal(int n)
@@ -42,12 +56,14 @@ void Player::heal(int n)
     }
 }
 
-void Player::damage(int n){
-    if(m_hp-n>=0){
-        m_hp-=n;
-    }
-    else{
-        m_hp=0;
+void Player::damage(int n)
+{
+    if(n>0) {
+        if (m_hp - n >= 0) {
+            m_hp -= n;
+        } else {
+            m_hp = 0;
+        }
     }
 }
 
@@ -56,8 +72,11 @@ bool Player::isKnockedOut() const
     return m_hp == 0;
 }
 
-void Player::addCoins(int n) {
-    m_coins+=n;
+void Player::addCoins(int n)
+{
+    if (n>0) {
+        m_coins += n;
+    }
 }
 
 bool Player::pay(int n)
@@ -65,7 +84,9 @@ bool Player::pay(int n)
     if(n>m_coins){
         return false;
     }
-    m_coins-=n;
+    else if(n>0){
+        m_coins-=n;
+    }
     return true;
 }
 
