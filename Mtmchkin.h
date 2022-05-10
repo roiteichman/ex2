@@ -30,6 +30,7 @@ public:
     Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards);
 
 
+
     /*
      * Play the next Card - according to the instruction in the exercise document
      *
@@ -72,8 +73,8 @@ public:
 private:
     //TODO: complete the Mtmchkin class.
     Player m_player;
-    const Card* m_cardsArray;
-    int m_numOfCards;
+    Card* m_cardsArray;
+    const int m_numOfCards;
     GameStatus m_gameStatus;
     Card m_currentCard;
     int m_currentIndex;

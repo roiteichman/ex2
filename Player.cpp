@@ -31,12 +31,14 @@ void Player::buff(int n) {
     m_force+=n;
 }
 
-void Player::heal(int n) {
-    if (m_hp+n<=m_maxHP){
-        m_hp+=n;
-    }
-    else{
-        m_hp=m_maxHP;
+void Player::heal(int n)
+{
+    if (n>0) {
+        if (m_hp + n <= m_maxHP) {
+            m_hp += n;
+        } else {
+            m_hp = m_maxHP;
+        }
     }
 }
 
@@ -49,7 +51,8 @@ void Player::damage(int n){
     }
 }
 
-bool Player::isKnockedOut() const{
+bool Player::isKnockedOut() const
+{
     return m_hp == 0;
 }
 

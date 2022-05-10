@@ -43,7 +43,7 @@ public:
      * @return
      *      void
     */
-    void printInfo();
+    void printInfo() const;
 
 
     /*
