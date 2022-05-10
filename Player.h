@@ -14,8 +14,6 @@ const int MAX_LEVEL = 10;
 
 class Player{
 
-
-
 public:
 
     /*
@@ -32,8 +30,8 @@ public:
     /*
     * C'tor to the "default player"
     */
-    Player(): m_name(""), m_maxHP(MAX_HP), m_hp(MAX_HP), m_force(STARTING_FORCE),
-    m_level(STARTING_LEVEL), m_coins(STARTING_COINS){}
+    /*Player(): m_name(""), m_maxHP(MAX_HP), m_hp(MAX_HP), m_force(STARTING_FORCE),
+    m_level(STARTING_LEVEL), m_coins(STARTING_COINS){}*/
 
 
     /*

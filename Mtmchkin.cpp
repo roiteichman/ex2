@@ -4,14 +4,14 @@
 
 #include "Mtmchkin.h"
 
-Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCards){
-    m_player = Player(playerName);
-    m_numOfCards = numOfCards;
-    m_cardsArray = cardsArray;
-    m_gameStatus = GameStatus::MidGame;
-    m_currentCard = cardsArray[0];
-    m_currentIndex = 0;
-}
+Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCards):
+    m_player(Player(playerName)),
+    m_numOfCards(numOfCards),
+    m_cardsArray(cardsArray),
+    m_gameStatus(GameStatus::MidGame),
+    m_currentCard(cardsArray[0]),
+    m_currentIndex(0)
+{}
 
 void Mtmchkin::playNextCard() {
     m_currentCard.printInfo();

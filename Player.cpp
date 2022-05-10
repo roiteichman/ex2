@@ -4,14 +4,14 @@
 #include "Player.h"
 #include "utilities.h"
 
-Player::Player(const char* name, int hp, int force) {
-    m_name=name;
-    m_maxHP=hp;
-    m_hp=m_maxHP;
-    m_force=force;
-    m_level = STARTING_LEVEL;
-    m_coins = STARTING_COINS;
-}
+Player::Player(const char* name, int hp, int force):
+    m_maxHP(hp),
+    m_hp(m_maxHP),
+    m_name(name),
+    m_force(force),
+    m_level(STARTING_LEVEL),
+    m_coins(STARTING_COINS)
+{}
 
 void Player::printInfo(){
     printPlayerInfo(m_name, m_level, m_force, m_hp, m_coins);
