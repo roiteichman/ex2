@@ -68,6 +68,12 @@ public:
      */
     GameStatus getGameStatus() const;
 
+
+    /*
+     * Here we are explicitly telling the compiler to use the default methods
+    */
+    ~Mtmchkin();
+
     //TODO: complete the Mtmchkin class.
 
 private:
